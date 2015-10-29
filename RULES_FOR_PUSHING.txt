@@ -1,0 +1,6 @@
+In an effor to reduce merge conflicts there are a few simple rules we should all
+follow to make sure nothing goes super wrong
+1. Put all work in YOUR folder, in the logical sub folder. (ie stuff thats not done does not go in finished)
+2. Labels and file names should be as follows. NAME_COMPONENT_DATE.circ
+3. Do not change stuff that is not in your folders. If you want to msake changes, copy the file into 
+	one of your directories and then make changes. 
