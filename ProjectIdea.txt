@@ -1,0 +1,22 @@
+A 32-bit cpu with support for tty screen, keyboard, and simple graphic display.
+
+Instructions: 1 byte for opcode, 3 bytes for arguments (registers/immediate values)
+Cycles (4): Fetch (load instruction), ALU, write, something else
+
+General Tasks:
+	- alu
+	- bus control
+	- registers
+	- clock and program counter
+	- document instructions
+	
+
+Tasks:
+	Will:
+		- clock and program counter
+	Tom:
+		- ALU
+	Crissy:
+		- registers 
+	Cliff:
+		- Bus control
