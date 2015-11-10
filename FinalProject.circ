@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
 This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-<lib desc="#Wiring" name="0"/>
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="appear" val="right"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
-  <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Arithmetic" name="3">
+    <tool name="Shifter">
+      <a name="shift" val="lr"/>
+    </tool>
+  </lib>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -15,6 +29,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
+  <lib desc="file#/home/cliff/School/Architecture/CPU-Project/Tom/Finished/TOM_ALU_10-30-15.circ" name="7"/>
+  <lib desc="file#/home/cliff/School/Architecture/CPU-Project/cliff/in-progress/cliff_bus_control_11-07-15.circ" name="8"/>
+  <lib desc="file#/home/cliff/School/Architecture/CPU-Project/Will/Finished/Clock.circ" name="9"/>
+  <lib desc="file#/home/cliff/School/Architecture/CPU-Project/crissy/inprogress/register-file.circ" name="10"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -53,11 +71,131 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <comp lib="6" loc="(231,53)" name="Text">
-      <a name="text" val="By Cliff, Will, Tom, &amp; Crissy"/>
+    <wire from="(180,290)" to="(180,300)"/>
+    <wire from="(650,160)" to="(650,200)"/>
+    <wire from="(280,110)" to="(280,170)"/>
+    <wire from="(350,180)" to="(420,180)"/>
+    <wire from="(280,170)" to="(300,170)"/>
+    <wire from="(510,60)" to="(510,110)"/>
+    <wire from="(470,110)" to="(510,110)"/>
+    <wire from="(430,210)" to="(430,220)"/>
+    <wire from="(320,260)" to="(330,260)"/>
+    <wire from="(720,60)" to="(720,120)"/>
+    <wire from="(200,110)" to="(280,110)"/>
+    <wire from="(410,230)" to="(470,230)"/>
+    <wire from="(300,280)" to="(330,280)"/>
+    <wire from="(450,180)" to="(470,180)"/>
+    <wire from="(630,160)" to="(630,310)"/>
+    <wire from="(240,270)" to="(270,270)"/>
+    <wire from="(180,110)" to="(180,160)"/>
+    <wire from="(680,120)" to="(720,120)"/>
+    <wire from="(480,240)" to="(480,300)"/>
+    <wire from="(270,180)" to="(270,240)"/>
+    <wire from="(270,240)" to="(480,240)"/>
+    <wire from="(460,220)" to="(460,290)"/>
+    <wire from="(320,260)" to="(320,270)"/>
+    <wire from="(450,340)" to="(500,340)"/>
+    <wire from="(260,280)" to="(260,290)"/>
+    <wire from="(470,230)" to="(470,330)"/>
+    <wire from="(270,180)" to="(300,180)"/>
+    <wire from="(450,330)" to="(470,330)"/>
+    <wire from="(170,110)" to="(180,110)"/>
+    <wire from="(280,290)" to="(280,320)"/>
+    <wire from="(470,110)" to="(470,180)"/>
+    <wire from="(300,270)" to="(320,270)"/>
+    <wire from="(450,320)" to="(570,320)"/>
+    <wire from="(350,320)" to="(420,320)"/>
+    <wire from="(430,220)" to="(460,220)"/>
+    <wire from="(330,280)" to="(330,300)"/>
+    <wire from="(570,160)" to="(570,320)"/>
+    <wire from="(280,110)" to="(470,110)"/>
+    <wire from="(350,170)" to="(420,170)"/>
+    <wire from="(180,290)" to="(260,290)"/>
+    <wire from="(450,290)" to="(460,290)"/>
+    <wire from="(410,200)" to="(420,200)"/>
+    <wire from="(450,310)" to="(630,310)"/>
+    <wire from="(350,310)" to="(420,310)"/>
+    <wire from="(260,280)" to="(270,280)"/>
+    <wire from="(250,320)" to="(280,320)"/>
+    <wire from="(30,160)" to="(180,160)"/>
+    <wire from="(510,60)" to="(720,60)"/>
+    <wire from="(450,300)" to="(480,300)"/>
+    <wire from="(30,160)" to="(30,200)"/>
+    <wire from="(410,200)" to="(410,230)"/>
+    <wire from="(650,200)" to="(670,200)"/>
+    <comp lib="0" loc="(330,260)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="Instruction #"/>
     </comp>
-    <comp lib="6" loc="(242,31)" name="Text">
+    <comp lib="0" loc="(30,110)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Instruction #"/>
+    </comp>
+    <comp lib="0" loc="(250,320)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Reset"/>
+    </comp>
+    <comp lib="0" loc="(670,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Reset RAM"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(58,50)" name="Text">
+      <a name="text" val="ROM (Instructions)"/>
+    </comp>
+    <comp lib="8" loc="(450,290)" name="main"/>
+    <comp lib="6" loc="(437,145)" name="Text">
+      <a name="text" val="ALU"/>
+    </comp>
+    <comp lib="7" loc="(450,180)" name="ALU"/>
+    <comp lib="9" loc="(300,270)" name="main"/>
+    <comp lib="6" loc="(362,29)" name="Text">
       <a name="text" val="32-bit CPU"/>
+      <a name="font" val="Times New Roman plain 18"/>
+    </comp>
+    <comp lib="6" loc="(319,150)" name="Text">
+      <a name="text" val="Registers"/>
+    </comp>
+    <comp lib="10" loc="(350,170)" name="16-register file"/>
+    <comp lib="6" loc="(713,159)" name="Text">
+      <a name="text" val="RAM"/>
+    </comp>
+    <comp lib="6" loc="(423,375)" name="Text">
+      <a name="text" val="Bus Control"/>
+    </comp>
+    <comp lib="4" loc="(170,110)" name="ROM">
+      <a name="dataWidth" val="32"/>
+      <a name="contents">addr/data: 8 32
+0
+</a>
+    </comp>
+    <comp lib="0" loc="(240,270)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Goto enable"/>
+    </comp>
+    <comp lib="0" loc="(330,300)" name="Splitter">
+      <a name="appear" val="right"/>
+    </comp>
+    <comp lib="6" loc="(365,60)" name="Text">
+      <a name="text" val="By Cliff, Will, Tom, &amp; Crissy"/>
+      <a name="font" val="Ubuntu plain 12"/>
+    </comp>
+    <comp lib="0" loc="(180,300)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Manual cycle"/>
+    </comp>
+    <comp lib="0" loc="(500,340)" name="Tunnel">
+      <a name="label" val="Goto enable"/>
+    </comp>
+    <comp lib="6" loc="(222,244)" name="Text">
+      <a name="text" val="Clock"/>
+    </comp>
+    <comp lib="4" loc="(680,120)" name="RAM">
+      <a name="dataWidth" val="32"/>
+      <a name="bus" val="separate"/>
     </comp>
   </circuit>
 </project>
